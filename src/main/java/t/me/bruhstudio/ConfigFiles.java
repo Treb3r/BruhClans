@@ -32,9 +32,16 @@ public final class ConfigFiles {
     }
 
     public void load() {
+        if (!this.plugin.getDataFolder().exists()) {
+            this.plugin.getDataFolder().mkdirs();
+        }
         for (String name : new String[]{"settings.yml", "messages.yml", "menus.yml", "features/exp.yml", "features/glow.yml", "features/rewards.yml", "features/seller.yml"}) {
             File file = new File(this.plugin.getDataFolder(), name);
             if (!file.exists()) {
+                File parent = file.getParentFile();
+                if (parent != null && !parent.exists()) {
+                    parent.mkdirs();
+                }
                 this.plugin.saveResource(name, false);
             }
             this.files.put(name, YamlConfiguration.loadConfiguration((File)file));
