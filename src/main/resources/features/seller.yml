@@ -1,0 +1,35 @@
+title: "Клановый скупщик"
+items:
+  item1:
+    material: DIAMOND
+    name: "Diamond"
+    give: 15
+    lore:
+      - "&#AAAAAA+ &#FF555515 &#FFAA00XP"
+  item2:
+    material: GUNPOWDER
+    name: "Gunpowder"
+    give: 35
+    lore:
+      - "&#AAAAAA+ &#FF555535 &#FFAA00XP"
+  item3:
+    material: ENCHANTED_GOLDEN_APPLE
+    name: "Enchanted Golden Apple"
+    give: 250
+    lore:
+      - "&#AAAAAA+ &#FF5555250 &#FFAA00XP"
+  item4:
+    material: NETHER_STAR
+    name: "Nether Star"
+    give: 650
+    lore:
+      - "&#AAAAAA+ &#FF5555650 &#FFAA00XP"
+  item5:
+    material: BLAZE_ROD
+    name: "Blaze Rod"
+    give: 15
+    lore:
+      - "&#AAAAAA+ &#FF555515 &#FFAA00XP"
+messages:
+  absentItem: "&cНедостаточно предметов!"
+  success: "&aВы продали &e<count>x <name>&a и получили &e<size> XP"

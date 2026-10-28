@@ -1,0 +1,188 @@
+gui:
+  main:
+    title: '<font:minecraft:clan><white>0B1z<font:minecraft:title>КЛАН: <name>'
+  levels:
+    title: '&#AA00AA&l* &#555555&lКлан: &#555555&l<name>'
+  storage:
+    title: '&#AA00AA&l* &#555555&lКлан: &#555555&l<name>'
+  members:
+    title: '&#AA00AA&l* &#555555&lКлан: &#555555&l<name>'
+  top:
+    title: '<font:minecraft:clan><white>0B1K2z600<font:minecraft:title>ТОП КЛАНОВ'
+items:
+  panel:
+    material: RED_STAINED_GLASS_PANE
+    amount: 1
+    name: ' '
+    flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+  back:
+    material: TIPPED_ARROW
+    amount: 1
+    name: '&#FFAA00Назад'
+    flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+  info:
+    material: KNOWLEDGE_BOOK
+    amount: 1
+    name: '&#FF5555??&#FFAA00 Информация'
+    flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+    lore:
+      - '&#FFFFFF Клан:&#FFFF55 <name>'
+      - '&#FFFFFF Участники:&#FF5555 <size>/<max>'
+      - '&#FFFFFF Уровень:&#FF55FF <level> &#555555(&#5555FF<xp> XP&#555555)'
+      - '&#FFFFFF Казна:&#FFAA00 $<bank_balance>'
+      - '&#FFFFFF '
+      - '&#FFFFFF PVP-режим:&#FFFF55 <pvp>'
+      - '&#FFFFFF Макс. символов:&#FFFF55 <max_length>'
+      - '&#FFFFFF Лимит казны:&#FFFF55 <bank_limit>'
+      - '&#FFFFFF Мест в хранилище:&#FFFF55 <storage_limit>'
+  members:
+    material: TOTEM_OF_UNDYING
+    amount: 1
+    name: '&#FFAA00Список участников'
+    flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+    lore:
+      - '&#FFFFFFУчастники:&#FFFF55 <size>/<max>'
+      - ''
+      - '&#FFFFFFЗдесь показаны участники'
+      - '&#FFFFFFклана и их права.'
+      - '&#FFFFFFУправляйте кланом с удобством'
+  level:
+    material: DIAMOND
+    amount: 1
+    name: '&#FFAA00Уровень клана'
+    flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+    lore:
+      - '&#FFFFFFВаш уровень:&#FF55FF <level> &#555555(&#5555FF<xp> XP&#555555)'
+      - ''
+      - '&#FFFFFFПрокачивайте клан, чтобы'
+      - '&#FFFFFFполучать новые возможности,'
+      - '&#FFFFFFслоты и бонусы.'
+  leaderbord:
+    material: ENCHANTED_GOLDEN_APPLE
+    amount: 1
+    name: '&#FFAA00Топ кланов'
+    flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+    lore:
+      - '&#FFFFFFВы на&#FFFF55 <top_rank> месте&#FFFFFF в топе'
+      - ''
+      - '&#FF5555[⚔]&#FFFFFF ТОП по Уровню &#FF5555Кланов&#FFFFFF:'
+  glow:
+    material: LEATHER_CHESTPLATE
+    amount: 1
+    name: '&#FF5555Свечение брони'
+    flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      - HIDE_DYE
+      - HIDE_ARMOR_TRIM
+      - HIDE_UNBREAKABLE
+    lore:
+      - '&#FFFFFFПодсветка вашего клана'
+      - '&#FFFFFFдля отображения'
+      - '&#FFFFFFцветной брони'
+      - '&#FFFFFFв бою и безопасности.'
+  design:
+    material: NAME_TAG
+    amount: 1
+    name: '&#FFAA00Цвет клана'
+    flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+  storage:
+    material: ENDER_CHEST
+    amount: 1
+    name: '&#FFAA00Хранилище ресурсов'
+    flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+    lore:
+      - '&#FFFFFFМест в хранилище:&#FFFF55 <storage_limit>'
+      - ''
+      - '&#FFFFFFОбщее хранилище клана'
+      - '&#FFFFFFпозволяет безопасно'
+      - '&#FFFFFFхранить общие вещи.'
+  howToLevel:
+    material: WRITABLE_BOOK
+    amount: 1
+    name: '&#FFAA00Как повысить уровень?'
+    flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+    lore:
+      - '&#FFFFFFПроявляйте активность,'
+      - '&#FFFFFFубивайте боссов,'
+      - '&#FFFFFFдобывайте ресурсы,'
+      - '&#FFFFFFучаствуйте в рейдах,'
+      - '&#FFFFFFвносите опыт в клан'
+  investResources:
+    material: CHEST
+    amount: 1
+    name: '&#FFAA00Внести ресурсы'
+    flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+    lore:
+      - '&#FFFFFFЧтобы прокачать уровень'
+      - '&#FFFFFFбыстрее и эффективнее,'
+      - '&#FFFFFFрекомендуем вносить'
+      - '&#FFFFFFресурсы в развитие клана,'
+      - '&#FFFFFFобменивая их на опыт'
+      - '&#FFFFFFв клановом скупщике.'
+  topBeacon:
+    material: BEACON
+    amount: 1
+    name: '&#555555[&#FFAA00Топ кланов&#555555]'
+    flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+  confirm:
+    material: LIME_STAINED_GLASS_PANE
+    amount: 1
+    name: '&#55FF55Подтвердить'
+    flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+  cancel:
+    material: RED_STAINED_GLASS_PANE
+    amount: 1
+    name: '&#FF5555Отмена'
+    flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+  gray_panel:
+    material: GRAY_STAINED_GLASS_PANE
+    amount: 1
+    name: ' '
+    flags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+  player:
+    material: PLAYER_HEAD
+    name: '&7[<prefix>&7] &6<player>'
+    owner: '&cГолова игрока'
+    noSelect: '&7&l✕ &7'
+    select: '&a&l✓&f &n'
+  dye:
+    material: RED_DYE
+    amount: 1
+    name: ' '
+  lastPage:
+    material: SPECTRAL_ARROW
+    amount: 1
+    name: '&#FFAA00Предыдущая страница'
+  nextPage:
+    material: SPECTRAL_ARROW
+    amount: 1
+    name: '&#FFAA00Следующая страница'

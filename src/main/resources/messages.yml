@@ -1,0 +1,162 @@
+lang:
+  prefix: '&#FF0000[⚔] '
+  helpAccept: '&#FFFF00Помощь: &f/clan accept <название>'
+  helpCancel: '&#FFFF00Помощь: &f/clan cancel <название>'
+  absent: '&#FF0000Отсутствует'
+  noPermission: Вас не дозволено использовать эту команду!
+  offline: '&#FF0000Ошибка: &fИгрок &#FFFF00<player> &fне в сети!'
+  money: 'Баланс клана: &5<size>'
+  cooldown:
+    members: Подождите время перед кликом
+    command: Подождите время перед командой
+  placeholder: '&#FF0000Нет'
+  SHOW_MONEY: Смотреть баланс
+  WITHDRAW_MONEY: Снимать баланс
+  INVEST_MONEY: Пополнять баланс
+  INVITE_PLAYERS: Приглашать игроков
+  KICK_PLAYERS: Выгонять игроков
+  PVP_TOGGLE: Изменять режим пвп
+  CLAN_RENAME: Переименовывать клан
+  CLAN_SETHOME: Устанавливать дома
+  CLAN_DELHOME: Удалять клановые дома
+  CLAN_GLOW: Управлять цветом клана
+  USE_STORAGE: Использовать хранилище
+  EDIT_PERMISSIONS: Изменять права
+  ALL: Все права
+  absentArguments: Недостаточно аргументов!
+  top: "&#FF0000[!] &fТОП по Уровню &#FF0000Кланов&f:\n &#00FF00① &#FF0000[&f%bruhclans_topBalance_clan_1%&#FF0000]&f, лидер: &#FF0000%bruhclans_topBalance_player_1%&f, &3%bruhclans_topBalance_size_1% XP\n &#FFFF00② &#FF0000[&f%bruhclans_topBalance_clan_2%&#FF0000]&f, лидер: &#FF0000%bruhclans_topBalance_player_2%&f, &3%bruhclans_topBalance_size_2% XP\n &6③ &#FF0000[&f%bruhclans_topBalance_clan_3%&#FF0000]&f, лидер: &#FF0000%bruhclans_topBalance_player_3%&f, &3%bruhclans_topBalance_size_3% XP\n &#FF0000④ &#FF0000[&f%bruhclans_topBalance_clan_4%&#FF0000]&f, лидер: &#FF0000%bruhclans_topBalance_player_4%&f, &3%bruhclans_topBalance_size_4% XP\n &#FF0000⑤ &#FF0000[&f%bruhclans_topBalance_clan_5%&#FF0000]&f, лидер: &#FF0000%bruhclans_topBalance_player_5%&f, &3%bruhclans_topBalance_size_5% XP\n &#FF0000⑥ &#FF0000[&f%bruhclans_topBalance_clan_6%&#FF0000]&f, лидер: &#FF0000%bruhclans_topBalance_player_6%&f, &3%bruhclans_topBalance_size_6% XP\n &#FF0000⑦ &#FF0000[&f%bruhclans_topBalance_clan_7%&#FF0000]&f, лидер: &#FF0000%bruhclans_topBalance_player_7%&f, &3%bruhclans_topBalance_size_7% XP\n &#FF0000⑧ &#FF0000[&f%bruhclans_topBalance_clan_8%&#FF0000]&f, лидер: &#FF0000%bruhclans_topBalance_player_8%&f,\
+    \ &3%bruhclans_topBalance_size_8% XP\n &#FF0000⑨ &#FF0000[&f%bruhclans_topBalance_clan_9%&#FF0000]&f, лидер: &#FF0000%bruhclans_topBalance_player_9%&f, &3%bruhclans_topBalance_size_9% XP\n &#FF0000⑩ &#FF0000[&f%bruhclans_topBalance_clan_10%&#FF0000]&f, лидер: &#FF0000%bruhclans_topBalance_player_10%&f, &3%bruhclans_topBalance_size_10% XP"
+  lore:
+  - '&7&l------------------------'
+  - ' &fПКМ &7- Листать вниз'
+  - ' &fЛКМ  &7- Менять значение'
+  - '&7&l------------------------'
+  colors:
+  - 'Возможные цветовые кода:'
+  - '- '
+  reward:
+    notifyAll: '&#55FF55Клановый уровень увеличен до &#FFFF55<size>&#55FF55!'
+    purchased: '&#55FF55Игрок &#FFFF55<player> &#55FF55приобрел уровень &#FFFF55<level> &#55FF55для клана!'
+  prefixPlayer:
+    non: Игрок не в клане
+    renamed: Вы сменили префикс игроку <player> на <name>
+  delhome:
+    absentHome: Такого дома не существует!
+    success: Вы успешно удалили дом <name>
+  home:
+    absentHome: Такого дома не существует!
+    success: Вы успешно телепортированы в дом <name>
+  sethome:
+    already: Такой дом уже существует!
+    success: Вы успешно создали дом <name>
+    limit: Вы превышаете лимит
+  rename:
+    maxLength: Вы превысили лимит клана в <size> символов!
+    notifyAll: Игрок <player>, изменил название клана на <name>
+    absentColor: 'У вас нет возможности использовать цвет: [<color>]'
+  pvp:
+    enable: '&#00FF00Включено'
+    disable: '&#FF0000Выключено'
+    notifyAll: 'Игрок <player> сменил пвп режим на: <state>'
+  glow:
+    enable: '&#00FF00Включено'
+    disable: '&#FF0000Выключено'
+    notifyAll: 'Игрок <player> сменил режим свечения на: <state>'
+    change: Игрок <player> сменил цвет подсветки на <color>
+  withdraw:
+    absentMoney: В клане не достаточно монет для снятия
+    withdrawed: 'Вы забрали из баланса клана: <size>'
+    notifyAll: Игрок <player>, забрал <size> монет из клана!
+  invest:
+    absentMoney: У вас недостаточно средств, так как вы ввели сумму более чем у вас на балансе
+    invested: 'Вы внесли в баланс клана: <size>'
+    notifyAll: Игрок <player>, внес <size> монет в клан!
+  kick:
+    success: Вы успешно выгнали игрока <player> из клана
+    non: Игрок не в вашем клане
+    owner: Игрок владелец!
+  leave:
+    owner: Вы не можете выйти из клана, так как вы владелец! Напишите /clan disband для удаления клана
+    success: Вы вышли из клана
+    notifyAll: Игрок <player> вышел из клана!
+  create:
+    matches: При создании клана запрещено указывать хуйню!
+    color: При создании клана запрещено указывать цвет!
+    absentMoney: Для создания клана необходимо &51000 &fмонет!
+    minLength: Для создания клана, нужно ввести имя не менее &54 символов
+    maxLength: Для создания клана, нужно ввести имя не более &516 символов
+    success: 'Вы успешно создали клан: <name>'
+    already: Такой же клан уже существует
+  disband:
+    success: 'Вы успешно распустили клан: <name>'
+    noOwner: Вы не владелец клана!
+    disbanded: 'Владелец клана решил распустить клан: <name>'
+  invite:
+    nonInvite: '&#FF0000Приглашение недействительно!'
+    limitMembers: Вы превышаете лимит участников! (<size>)
+    alreadyInvite: Игрок уже рассматривает приглашение!
+    alreadyInClan: Игрок <player> уже находится в другом клане!
+    notifyAll: '&fИгрок &#FFFF00<player> &fуспешно вступил в клан!'
+    success: Вы успешно отправили запрос на вход в клан игроку <player>
+    successAccept: '&fВы успешно вступили в клан &#FFFF00<clan>&f!'
+    successCancel: '&fВы отклонили приглашение в клан.'
+    canceled: '&#FFFF00Кланы: <player> &fотклонил Ваше приглашение в клан.'
+    text: '&#FFFF00<player> &fприглашает Вас в клан &#FFFF00<clan>&f:'
+    acceptButton: '&#00FF00[Вступить]'
+    declineButton: '&#FF0000[Отклонить]'
+  help:
+    text: 'Помощь по &9Кланам:'
+    item: '&#FF0000<number>. /clan <command><addonName> &f- <description>'
+command:
+  invalidNumber: Число указано не верно!
+  bankLimit: Вы превышаете лимит казны!
+  ownerPrefix: §eВладелец
+  memberPrefix: §eУчастник
+  colorCodes: '&6Доступные цветовые коды'
+  permissionYesSelected: §a [Да]
+  permissionNoSelected: §c [Нет]
+  permissionYes: §a Да
+  permissionNo: §c Нет
+helpDescriptions:
+  help: Выводит этот список
+  create: Создать клан
+  cancel: Отказаться от приглашения в клан
+  accept: Принять приглашение в клан
+  menu: Информация о клане
+  top: ТОП кланов по уровню
+  leave: Покинуть клан
+  money: Посмотреть клановый баланс
+  invest: Вложить деньги
+  withdraw: Снять деньги
+  pvp: Переключить статус PVP-режима
+  storage: Хранилище клана
+  home: Телепортироваться в дом клана
+  sethome: Установить клановый дом
+  delhome: Удалить клановый дом
+  invite: Пригласить игрока в клан
+  prefix: Изменить префикс соклановцу
+  kick: Выгнать игрока из клана
+  rename: Изменить название клана
+  disband: Распустить клан
+  glow: Подсветка клановых игроков
+helpArguments:
+  create: ' Название'
+  delhome: ' Название'
+  kick: ' Игрок'
+  invite: ' Игрок'
+  home: ' Название'
+  invest: ' Сумма'
+  prefix: ' Ник Префикс'
+  withdraw: ' Сумма'
+  sethome: ' Название'
+  rename: ' Название'
+timeForms:
+  seconds:
+    one: секунда
+    few: секунды
+    many: секунд
+buy:
+  noPoints: "&#FF0000[✖] Ошибка! &fУ Вас не хватает &#00FF00Токенов&f!\n &fНе беда, их можно купить на &#FFFF00FillaGame.MyDonate.io\n&#FF0000[✖] Ошибка: &fНе удалось списать токены."
+  failed: '&#FF0000[✖] Ошибка: &fНе удалось списать токены.'
+  success: '&#00FF00Вы успешно приобрели &#FFFF00<level> &#00FF00уровень клана за &#FFFF00<price> &#00FF00ТК!'
+  alreadyPassed: '&#FF0000Этот уровень уже пройден!'

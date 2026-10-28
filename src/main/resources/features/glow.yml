@@ -1,0 +1,204 @@
+title: "&cВыберите цвет:"
+waitColor: "Подождите перед сменой цвета!"
+waitToggle: "Подождите перед переключением!!"
+colors:
+  color1:
+    level: 1
+    addonName: "&cКрасный"
+    name: "&cКрасный"
+    material: LEATHER_CHESTPLATE
+    flags:
+      - "HIDE_ATTRIBUTES"
+    rgb:
+      r: 255
+      g: 0
+      b: 0
+  color2:
+    level: 2
+    addonName: "&6Оранжевый"
+    name: "&6Оранжевый"
+    material: LEATHER_CHESTPLATE
+    flags:
+      - "HIDE_ATTRIBUTES"
+    rgb:
+      r: 255
+      g: 140
+      b: 0
+  color3:
+    level: 3
+    addonName: "&eЖёлтый"
+    name: "&eЖёлтый"
+    material: LEATHER_CHESTPLATE
+    flags:
+      - "HIDE_ATTRIBUTES"
+    rgb:
+      r: 255
+      g: 255
+      b: 0
+  color4:
+    level: 4
+    addonName: "&2Зелёный"
+    name: "&2Зелёный"
+    material: LEATHER_CHESTPLATE
+    flags:
+      - "HIDE_ATTRIBUTES"
+    rgb:
+      r: 50
+      g: 205
+      b: 50
+  color5:
+    level: 5
+    addonName: "&aЛаймовый"
+    name: "&aЛаймовый"
+    material: LEATHER_CHESTPLATE
+    flags:
+      - "HIDE_ATTRIBUTES"
+    rgb:
+      r: 0
+      g: 255
+      b: 0
+  color6:
+    level: 6
+    addonName: "&bГолубой"
+    name: "&bГолубой"
+    material: LEATHER_CHESTPLATE
+    flags:
+      - "HIDE_ATTRIBUTES"
+    rgb:
+      r: 0
+      g: 255
+      b: 255
+  color7:
+    level: 7
+    addonName: "&9Синий"
+    name: "&9Синий"
+    material: LEATHER_CHESTPLATE
+    flags:
+      - "HIDE_ATTRIBUTES"
+    rgb:
+      r: 65
+      g: 105
+      b: 225
+  color8:
+    level: 8
+    addonName: "&1Тёмно Синий"
+    name: "&1Тёмно Синий"
+    material: LEATHER_CHESTPLATE
+    flags:
+      - "HIDE_ATTRIBUTES"
+    rgb:
+      r: 0
+      g: 0
+      b: 255
+  color9:
+    level: 9
+    addonName: "&5Тёмно Фиолетовый"
+    name: "&5Тёмно Фиолетовый"
+    material: LEATHER_CHESTPLATE
+    flags:
+      - "HIDE_ATTRIBUTES"
+    rgb:
+      r: 128
+      g: 0
+      b: 128
+  color10:
+    level: 10
+    addonName: "&5Фиолетовый"
+    name: "&5Фиолетовый"
+    material: LEATHER_CHESTPLATE
+    flags:
+      - "HIDE_ATTRIBUTES"
+    rgb:
+      r: 138
+      g: 43
+      b: 226
+  color11:
+    level: 11
+    addonName: "&fБелый"
+    name: "&fБелый"
+    material: LEATHER_CHESTPLATE
+    flags:
+      - "HIDE_ATTRIBUTES"
+    rgb:
+      r: 255
+      g: 250
+      b: 250
+  color12:
+    level: 12
+    addonName: "&dРозовый"
+    name: "&dРозовый"
+    material: LEATHER_CHESTPLATE
+    flags:
+      - "HIDE_ATTRIBUTES"
+    rgb:
+      r: 255
+      g: 192
+      b: 203
+  color13:
+    level: 13
+    addonName: "&8Тёмно Серый"
+    name: "&8Тёмно Серый"
+    material: LEATHER_CHESTPLATE
+    flags:
+      - "HIDE_ATTRIBUTES"
+    rgb:
+      r: 105
+      g: 105
+      b: 105
+  color14:
+    level: 14
+    addonName: "&0Чёрный"
+    name: "&0Чёрный"
+    material: LEATHER_CHESTPLATE
+    flags:
+      - "HIDE_ATTRIBUTES"
+    rgb:
+      r: 1
+      g: 0
+      b: 0
+
+native-items:
+  item1:
+    material: RED_STAINED_GLASS_PANE
+    name: "&f"
+    slots:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 17
+      - 18
+      - 26
+      - 27
+      - 28
+      - 29
+      - 30
+      - 32
+      - 33
+      - 34
+      - 35
+  item2:
+    material: SPECTRAL_ARROW
+    name: "&6Назад"
+    slots:
+      - 31
+    flags:
+      - "HIDE_ATTRIBUTES"
+items:
+  disabled:
+    material: RED_DYE
+    name: "&fСтатус: &cВыключено"
+    lore:
+      - ""
+      - "&fНажмите, чтобы &6переключить"
+  enabled:
+    material: LIME_DYE
+    name: "&fСтатус: &aВключено"
+    lore:
+      - ""
+      - "&fНажмите, чтобы &6переключить"

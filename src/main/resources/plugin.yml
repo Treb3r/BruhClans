@@ -1,0 +1,36 @@
+name: BruhClans
+version: 1.0.0
+main: t.me.bruhstudio.BruhFunClansPlugin
+api-version: '1.21'
+author: bruhstudio
+description: A fun clans plugin for Minecraft servers
+
+depend:
+  - Vault
+softdepend:
+  - PlaceholderAPI
+  - ProtocolLib
+
+commands:
+  clan:
+    description: Main clan command
+    usage: /clan
+    aliases:
+      - c
+      - clans
+  cc:
+    description: Clan chat command
+    usage: /cc <message>
+  bruhclans:
+    description: BruhClans admin and debug commands
+    usage: /bruhclans
+    permission: bruhclans.admin
+    permission-message: "Unknown command. Type \"/help\" for help."
+    aliases:
+      - bclans
+      - bcadmin
+
+permissions:
+  bruhclans.admin:
+    description: Access to BruhClans debug and admin commands
+    default: op

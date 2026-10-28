@@ -1,0 +1,7 @@
+settings:
+  blocksBreak:
+    - "DIAMOND_ORE:30"
+  blocksPlace:
+    - "DIAMOND_ORE:30"
+  mobKill: 30
+  playerKill: 30

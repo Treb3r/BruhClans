@@ -1,0 +1,51 @@
+# Compiled class files & build artifacts
+target/
+*.class
+*.jar
+
+# Server and runtime test directory
+test_server/
+
+# IntelliJ IDEA & IDE files
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+
+# OS / temp files
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+
+# Archives & binaries
+*.zip
+
+# Research, screenshots and test utilities
+Foto/
+Foto1/
+clan*/
+Испытания/
+Поручения/
+Точки баз/
+Уровень/
+Участники/
+Хранилище/
+Цвет брони/
+если быстро вводить команду clan и прочии/
+original_basher/
+scratch/
+custom_font_icons/
+all_paper_cmd/
+textures_370_415/
+*.txt
+*.py
+/*.java
+/*.ps1
+/META-INF/
+/.agents/
+/AGENTS.md

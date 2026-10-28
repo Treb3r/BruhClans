@@ -1,0 +1,33 @@
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.File;
+
+public class PrintCoordsImage14 {
+    public static void main(String[] args) throws Exception {
+        BufferedImage img = ImageIO.read(new File("clan coords/image_2026-10-26_19-06-14.png"));
+        System.out.println("FILE: image_2026-10-26_19-06-14.png (" + img.getWidth() + "x" + img.getHeight() + ")");
+        int w = img.getWidth();
+        for (int c = 0; c < w; c += 100) {
+            int end = Math.min(w, c + 100);
+            System.out.println("--- Columns " + c + " to " + (end - 1) + " ---");
+            for (int y = 0; y < img.getHeight(); y++) {
+                StringBuilder sb = new StringBuilder();
+                boolean has = false;
+                for (int x = c; x < end; x++) {
+                    int rgb = img.getRGB(x, y);
+                    int r = (rgb >> 16) & 0xff;
+                    int g = (rgb >> 8) & 0xff;
+                    int b = rgb & 0xff;
+                    if (r > 160 && g < 70 && b < 70) { sb.append("R"); has = true; }
+                    else if (r > 180 && g > 70 && g < 170 && b < 70) { sb.append("O"); has = true; }
+                    else if (r > 180 && g > 180 && b < 70) { sb.append("Y"); has = true; }
+                    else if (r < 70 && g > 180 && b < 70) { sb.append("G"); has = true; }
+                    else if (r > 180 && g > 180 && b > 180) { sb.append("W"); has = true; }
+                    else if (r > 100 && g > 100 && b > 100) { sb.append("."); has = true; }
+                    else sb.append(" ");
+                }
+                if (has) System.out.printf("%2d: %s%n", y, sb.toString());
+            }
+        }
+    }
+}

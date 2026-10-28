@@ -1,0 +1,14 @@
+plugin:
+  brand: bruhclans
+  preloadOnEnable: true
+clan:
+  limits:
+    members: 3
+    money: 250000
+    homes: 0
+  create:
+    minPrice: 10000
+    minLength: 4
+    maxLength: 16
+database:
+  file: database.db
