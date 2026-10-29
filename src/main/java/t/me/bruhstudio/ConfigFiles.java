@@ -49,7 +49,10 @@ public final class ConfigFiles {
     }
 
     public YamlConfiguration get(String name) {
-        YamlConfiguration yaml = this.files.get(name);
+        if (name == null) {
+            return new YamlConfiguration();
+        }
+        YamlConfiguration yaml = this.files.get(name.replace('\\', '/'));
         return yaml != null ? yaml : new YamlConfiguration();
     }
 

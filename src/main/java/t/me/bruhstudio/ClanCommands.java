@@ -359,10 +359,10 @@ public final class ClanCommands implements CommandExecutor, TabCompleter {
         if (this.plugin.config() != null) {
             org.bukkit.configuration.file.YamlConfiguration settings = this.plugin.config().get("settings.yml");
             if (settings != null && settings.contains("clan.create.minPrice")) {
-                return settings.getLong("clan.create.minPrice", 10000L);
+                return Math.max(0L, settings.getLong("clan.create.minPrice", 10000L));
             }
             if (settings != null && settings.contains("clan.create.price")) {
-                return settings.getLong("clan.create.price", 10000L);
+                return Math.max(0L, settings.getLong("clan.create.price", 10000L));
             }
         }
         return 10000L;
@@ -941,21 +941,35 @@ public final class ClanCommands implements CommandExecutor, TabCompleter {
             player.sendMessage(this.plugin.config().color("&#FF0000[&#FF0000⚔&#FF0000] &#FFFF00Помощь: &f/clan create <название>"));
             return;
         }
+        if (values.length > 1) {
+            player.sendMessage(this.plugin.config().color("&#FF0000[&#FF0000⚔&#FF0000] &#FF0000Ошибка: &fНазвание клана не должно содержать пробелов!"));
+            return;
+        }
         String name = values[0];
         if (name.length() < 3 || name.length() > 16 || !NAME.matcher(name).matches()) {
             player.sendMessage(this.plugin.config().color("&#FF0000[&#FF0000⚔&#FF0000] &#FF0000Ошибка: &fНазвание клана должно быть от 3 до 16 символов!"));
             return;
         }
-        if (this.plugin.service().clanByName(name) != null) {
+        if (this.plugin.service().clanByName(name) != null || this.plugin.getClanByName(name) != null) {
             player.sendMessage(this.plugin.config().color("&#FF0000[&#FF0000⚔&#FF0000] &#FF0000Ошибка: &fКлан с таким названием уже существует!"));
             return;
         }
         long price = this.getClanCreatePrice();
-        if (this.plugin.economy.getBalance(player) < (double)price) {
-            player.sendMessage(this.plugin.config().color("&#FF0000[&#FF0000⚔&#FF0000] &#FF0000Ошибка: &fДля создания клана необходимо $" + price + "!"));
-            return;
+        if (price > 0L) {
+            if (this.plugin.economy == null) {
+                player.sendMessage(this.plugin.config().color("&#FF0000[&#FF0000⚔&#FF0000] &#FF0000Ошибка: &fЭкономика временно недоступна!"));
+                return;
+            }
+            if (this.plugin.economy.getBalance(player) < (double)price) {
+                player.sendMessage(this.plugin.config().color("&#FF0000[&#FF0000⚔&#FF0000] &#FF0000Ошибка: &fДля создания клана необходимо $" + price + "!"));
+                return;
+            }
+            net.milkbowl.vault.economy.EconomyResponse response = this.plugin.economy.withdrawPlayer(player, (double)price);
+            if (response == null || !response.transactionSuccess()) {
+                player.sendMessage(this.plugin.config().color("&#FF0000[&#FF0000⚔&#FF0000] &#FF0000Ошибка: &fНе удалось списать средства на создание клана!"));
+                return;
+            }
         }
-        this.plugin.economy.withdrawPlayer(player, price);
 
         Clan clan = new Clan();
         clan.name = name;
@@ -973,8 +987,10 @@ public final class ClanCommands implements CommandExecutor, TabCompleter {
         clan.add(ownerMember);
         clan.logHistory("Клан создан!");
 
-        this.plugin.service().store().add(clan);
-        this.plugin.service().store().flush();
+        synchronized (this.plugin.service().store()) {
+            this.plugin.service().store().add(clan);
+            this.plugin.service().store().flush();
+        }
 
         player.sendMessage(this.plugin.config().color("&#00FF00[✔] &fВы успешно создали клан &#FFFF00" + name + "&f!"));
     }
