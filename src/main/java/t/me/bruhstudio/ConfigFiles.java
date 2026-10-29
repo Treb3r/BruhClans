@@ -49,7 +49,8 @@ public final class ConfigFiles {
     }
 
     public YamlConfiguration get(String name) {
-        return this.files.get(name);
+        YamlConfiguration yaml = this.files.get(name);
+        return yaml != null ? yaml : new YamlConfiguration();
     }
 
     public String getSetting(String path, String def) {
@@ -120,4 +121,3 @@ public final class ConfigFiles {
         this.sendText(player, this.text(path), replacements);
     }
 }
-

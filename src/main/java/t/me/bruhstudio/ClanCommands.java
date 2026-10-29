@@ -355,8 +355,21 @@ public final class ClanCommands implements CommandExecutor, TabCompleter {
         }
     }
 
+    public long getClanCreatePrice() {
+        if (this.plugin.config() != null) {
+            org.bukkit.configuration.file.YamlConfiguration settings = this.plugin.config().get("settings.yml");
+            if (settings != null && settings.contains("clan.create.minPrice")) {
+                return settings.getLong("clan.create.minPrice", 10000L);
+            }
+            if (settings != null && settings.contains("clan.create.price")) {
+                return settings.getLong("clan.create.price", 10000L);
+            }
+        }
+        return 10000L;
+    }
+
     public void helpNonClan(Player player) {
-        long price = this.plugin.config().get("features/clan.yml").getLong("clan.create.price", 10000L);
+        long price = this.getClanCreatePrice();
         player.sendMessage(this.plugin.config().color("&#FF0000[&#FF0000⚔&#FF0000] &fПомощь по &#FFFF00Кланам&f:"));
         player.sendMessage(this.plugin.config().color("&#FF0000/clan create <название> &f- создать клан (&#FFFF00$" + price + "&f)"));
         player.sendMessage(this.plugin.config().color("&#FF0000/clan top &f- топ кланов по казне"));
@@ -937,7 +950,7 @@ public final class ClanCommands implements CommandExecutor, TabCompleter {
             player.sendMessage(this.plugin.config().color("&#FF0000[&#FF0000⚔&#FF0000] &#FF0000Ошибка: &fКлан с таким названием уже существует!"));
             return;
         }
-        long price = this.plugin.config().get("features/clan.yml").getLong("clan.create.price", 10000L);
+        long price = this.getClanCreatePrice();
         if (this.plugin.economy.getBalance(player) < (double)price) {
             player.sendMessage(this.plugin.config().color("&#FF0000[&#FF0000⚔&#FF0000] &#FF0000Ошибка: &fДля создания клана необходимо $" + price + "!"));
             return;
@@ -948,9 +961,10 @@ public final class ClanCommands implements CommandExecutor, TabCompleter {
         clan.name = name;
         clan.displayName = name;
         clan.owner = player.getName();
-        clan.moneyLimit = 100000L;
-        clan.memberLimit = 5;
-        clan.homeLimit = 2;
+        org.bukkit.configuration.file.YamlConfiguration settings = this.plugin.config() != null ? this.plugin.config().get("settings.yml") : null;
+        clan.moneyLimit = settings != null ? settings.getLong("clan.limits.money", 250000L) : 100000L;
+        clan.memberLimit = settings != null ? settings.getInt("clan.limits.members", 5) : 5;
+        clan.homeLimit = settings != null ? settings.getInt("clan.limits.homes", 2) : 2;
         clan.level = 0;
         clan.rating = 0;
 
